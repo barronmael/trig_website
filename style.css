@@ -1,0 +1,116 @@
+/* =============================
+   LIGHT THEME — EDIT THESE 5
+   ============================= */
+:root {
+  --bg: #f9fbfe;
+  /* page background */
+  --text: #000000;
+  /* main text */
+  --surface: #6dbced;
+  /* cards, boxes, list items */
+  --nav: #163d6a;
+  /* navbar (dark bar) */
+  --accent: #0b1f36;
+  /* links & primary buttons */
+}
+
+/* =============================
+   Do not edit below
+   ============================= */
+
+/* Auto-derived (you can ignore) */
+:root {
+  --accent-hover: color-mix(in srgb, var(--accent) 85%, black);
+  --on-nav: #FFFFFF;
+  /* text on dark navbar */
+  --border: #E6D6FF;
+  /* soft borders */
+  --hero: #98d1f3;
+  /* jumbotron/hero bg */
+}
+
+/* ====== Page ====== */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ====== Navbar ====== */
+.site-nav {
+  background: var(--nav);
+  color: var(--on-nav);
+}
+
+.site-nav .navbar-brand,
+.site-nav .nav-link {
+  color: var(--on-nav);
+  text-decoration: none;
+}
+
+.site-nav .nav-link:hover {
+  opacity: .9;
+}
+
+.site-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, .35);
+}
+
+.site-nav .navbar-toggler-icon {
+  filter: invert(1) brightness(1.2);
+}
+
+/* ====== Hero (“jumbotron”) ====== */
+.bg-body-tertiary {
+  background-color: var(--hero) !important;
+  color: var(--text);
+}
+
+/* ====== Cards & Boxes (light surfaces) ====== */
+.card,
+.box {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+}
+
+.box {
+  padding: 1rem;
+}
+
+/* List group inside light surfaces */
+.list-group,
+.list-group-item {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* ====== Links & Buttons ====== */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-hover);
+}
+
+/* Make anchor-buttons look like buttons, not links */
+a.btn {
+  text-decoration: none;
+}
+
+/* Bootstrap primary button uses your accent */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
